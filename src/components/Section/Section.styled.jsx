@@ -7,8 +7,12 @@ export const SectionWrapper = styled.section`
   padding-top: ${props => props.theme.space[4]}px;
   padding-bottom: ${props => props.theme.space[4]}px;
 
-  //max-width: 100%;
+  width: 100%;
   //width: 600px;
 
-  box-shadow: -1px -1px 15px #8ba793, 15px 15px 35px #fff;
+  mix-blend-mode: normal;
+  filter: drop-shadow(0px 18px 80px rgba(265, 265, 265, 1));
+  backdrop-filter: blur(8.5px);
+
+  box-shadow: -1px -1px 15px #4b1414, 15px 15px 35px #fff;
 `;

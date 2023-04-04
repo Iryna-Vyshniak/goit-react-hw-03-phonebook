@@ -18,7 +18,7 @@ export const FormField = styled.label`
   flex-direction: column;
   gap: 8px;
 
-  color: ${props => props.theme.colors.accent};
+  color: ${props => props.theme.colors.white};
   text-shadow: ${props => props.theme.shadows.textShadow};
 `;
 
@@ -40,19 +40,18 @@ export const FieldFormik = styled(Field)`
   border: 0;
   outline: 0;
   border-radius: 8px;
-  color: ${props => props.theme.colors.accent};
-  background-color: ${props => props.theme.colors.primary};
-  box-shadow: inset 1px 1px 3px #8ba793, inset -1px -1px 5px #fff;
+  color: ${props => props.theme.colors.text};
+  text-shadow: 0 0.5px 0.5px 0.5px #fff;
+  background-color: transparent;
+  box-shadow: inset 1px 1px 3px #b0706f, inset -1px -1px 5px #fff;
 
-  font-style: italic;
-
-  text-shadow: ${props => props.theme.shadows.textShadow};
   font-size: ${props => props.theme.fontSizes.s};
 `;
 
 export const ErrorMessage = styled(FormikError)`
-  font-style: italic;
   color: #9e0202;
+  text-shadow: 0 0.5px 0.5px #fff;
+  max-width: 200px;
 `;
 
 export const StyledButton = styled.button`
@@ -77,24 +76,35 @@ export const StyledButton = styled.button`
   transition: all 0.2s ease-in-out;
 
   background-color: ${p => p.theme.colors.muted};
+
   color: ${p => p.theme.colors.white};
+  text-shadow: ${props => props.theme.shadows.textShadow};
+
   cursor: pointer;
 
   :hover,
   :focus {
     background-color: ${p => p.theme.colors.secondary};
-    color: ${p => p.theme.colors.accent};
-    box-shadow: -2px -2px 5px #fff, 2px 2px 5px #8ba793;
+
+    color: ${p => p.theme.colors.text};
+    text-shadow: 1px 1px 1px #fff;
+
+    box-shadow: -2px -2px 2px #fff, 2px 2px 2px #4b1414;
+
     svg {
-      fill: ${p => p.theme.colors.accent};
-      stroke: ${p => p.theme.colors.accent};
+      fill: ${p => p.theme.colors.text};
+      stroke: ${p => p.theme.colors.text};
     }
+
     :active {
-      color: ${p => p.theme.colors.accent};
-      box-shadow: inset 1px 1px 2px #8ba793, inset -1px -1px 2px #fff;
+      color: ${p => p.theme.colors.text};
+      text-shadow: 1px 1px 1px 1px #fff;
+
+      box-shadow: inset 1px 1px 1px #4b1414, inset -1px -1px 1px #fff;
+
       svg {
-        fill: ${p => p.theme.colors.accent};
-        stroke: ${p => p.theme.colors.accent};
+        fill: ${p => p.theme.colors.text};
+        stroke: ${p => p.theme.colors.text};
       }
     }
   }

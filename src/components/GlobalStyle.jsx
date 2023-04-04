@@ -1,5 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 import 'modern-normalize';
+import '../assets/background.png';
 
 export const GlobalStyle = createGlobalStyle`
   body {
@@ -7,11 +8,15 @@ export const GlobalStyle = createGlobalStyle`
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
       'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
       sans-serif;
+
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color: ${props => props.theme.colors.background};
-    font-size: ${props => props.theme.fontSizes.s};
-    font-weight: ${props => props.theme.fontWeights.normal}
+
+    background: rgba(82, 24, 128, 0.4);
+    background-image: url(../assets/background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
   }
   code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',

@@ -5,7 +5,7 @@ export const LabelDescr = styled.label`
   flex-direction: column;
   gap: 8px;
 
-  color: ${props => props.theme.colors.accent};
+  color: ${props => props.theme.colors.white};
   text-shadow: ${props => props.theme.shadows.textShadow};
 `;
 
@@ -27,12 +27,11 @@ export const Input = styled.input`
   border: 0;
   outline: 0;
   border-radius: 8px;
-  color: ${props => props.theme.colors.accent};
-  background-color: ${props => props.theme.colors.primary};
-  box-shadow: inset 1px 1px 3px #8ba793, inset -1px -1px 5px #fff;
+  color: ${props => props.theme.colors.text};
+  text-shadow: 0 0.5px 0.5px 0.5px #fff;
 
-  font-style: italic;
+  background-color: transparent;
+  box-shadow: inset 1px 1px 3px #b0706f, inset -1px -1px 5px #fff;
 
-  text-shadow: ${props => props.theme.shadows.textShadow};
   font-size: ${props => props.theme.fontSizes.s};
 `;

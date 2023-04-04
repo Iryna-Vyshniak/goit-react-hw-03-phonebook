@@ -18,8 +18,8 @@ export const Item = styled.li`
   align-items: center;
   gap: 16px;
 
-  color: ${p => p.theme.colors.accent};
-  text-shadow: ${props => props.theme.shadows.textShadow};
+  color: ${p => p.theme.colors.text};
+  text-shadow: 0.5px 0.5px 0.5px #fff;
   font-size: ${props => props.theme.fontSizes.s};
 `;
 
@@ -41,18 +41,26 @@ export const Btn = styled.button`
   :hover,
   :focus {
     background-color: ${p => p.theme.colors.secondary};
-    color: ${p => p.theme.colors.accent};
-    box-shadow: -2px -2px 5px #fff, 2px 2px 5px #8ba793;
+
+    color: ${p => p.theme.colors.text};
+    text-shadow: 1px 1px 1px #fff;
+
+    box-shadow: -2px -2px 2px #fff, 2px 2px 2px #4b1414;
+
     svg {
-      fill: ${p => p.theme.colors.accent};
-      stroke: ${p => p.theme.colors.accent};
+      fill: ${p => p.theme.colors.text};
+      stroke: ${p => p.theme.colors.text};
     }
+
     :active {
-      color: ${p => p.theme.colors.accent};
-      box-shadow: inset 1px 1px 2px #8ba793, inset -1px -1px 2px #fff;
+      color: ${p => p.theme.colors.text};
+      text-shadow: 1px 1px 1px #fff;
+
+      box-shadow: inset 1px 1px 1px #4b1414, inset -1px -1px 1px #fff;
+
       svg {
-        fill: ${p => p.theme.colors.accent};
-        stroke: ${p => p.theme.colors.accent};
+        fill: ${p => p.theme.colors.text};
+        stroke: ${p => p.theme.colors.text};
       }
     }
   }

@@ -2,12 +2,12 @@ export const theme = {
   colors: {
     black: '#000',
     white: '#fff',
-    text: '#250B65',
-    background: '#845EC2',
-    primary: '#A178DF',
-    secondary: '#BE93FD',
-    accent: '#FACCFF',
-    muted: '#DCB0FF',
+    text: '#4B1414',
+    background: '#E0ABAD',
+    primary: '#b0706f',
+    secondary: '#D8A3A5',
+    accent: '#fdd7d7',
+    muted: '#d39496',
   },
   space: [0, 2, 4, 8, 16, 32, 64, 128, 256],
   fonts: {
@@ -40,7 +40,7 @@ export const theme = {
     round: '50%',
   },
   shadows: {
-    textShadow: '0 1px 1px #fff',
+    textShadow: '0 1px 1px #4B1414',
     boxShadow: 'rgb(0 0 0 / 24%) 10px 10px 5px 0px',
   },
 };

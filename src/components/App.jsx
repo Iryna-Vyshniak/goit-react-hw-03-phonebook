@@ -45,16 +45,25 @@ export default class App extends Component {
   }
 
   addContact = newContact => {
-    this.state.contacts.filter(
+    // this.state.contacts.filter(
+    //   contact =>
+    //     contact.name.toLowerCase().trim() ===
+    //       newContact.name.toLowerCase().trim() ||
+    //     contact.number.trim() === newContact.number.trim()
+    // ).length
+
+    const { contacts } = this.state;
+
+    contacts.some(
       contact =>
         contact.name.toLowerCase().trim() ===
           newContact.name.toLowerCase().trim() ||
         contact.number.trim() === newContact.number.trim()
-    ).length
+    )
       ? toast.error(`${newContact.name}: is already in contacts`, notifyOptions)
-      : this.setState(prevState => {
-          return { contacts: [newContact, ...prevState.contacts] };
-        });
+      : this.setState(prevState => ({
+          contacts: [newContact, ...prevState.contacts],
+        }));
   };
 
   deleteContact = contactId => {

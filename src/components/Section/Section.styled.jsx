@@ -4,11 +4,12 @@ export const SectionWrapper = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   padding-top: ${props => props.theme.space[4]}px;
   padding-bottom: ${props => props.theme.space[4]}px;
 
-  width: 100%;
-  //width: 600px;
+  max-width: 100%;
+  width: 600px;
 
   mix-blend-mode: normal;
   filter: drop-shadow(0px 18px 80px rgba(265, 265, 265, 1));

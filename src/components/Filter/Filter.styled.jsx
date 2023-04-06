@@ -5,6 +5,9 @@ export const LabelDescr = styled.label`
   flex-direction: column;
   gap: 8px;
 
+  max-width: 100%;
+  width: 300px;
+
   color: ${props => props.theme.colors.white};
   text-shadow: ${props => props.theme.shadows.textShadow};
 `;
@@ -20,9 +23,6 @@ export const Input = styled.input`
   padding-bottom: ${p => p.theme.space[3]}px;
   padding-left: ${p => p.theme.space[4]}px;
   padding-right: ${p => p.theme.space[4]}px;
-
-  max-width: 100%;
-  //width: 350px;
 
   border: 0;
   outline: 0;

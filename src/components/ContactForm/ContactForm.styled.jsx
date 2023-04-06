@@ -10,13 +10,16 @@ export const Form = styled(FormikForm)`
   padding: ${props => props.theme.space[3]}px;
 
   max-width: 100%;
-  //width: 500px;
+  width: 500px;
 `;
 
 export const FormField = styled.label`
   display: flex;
   flex-direction: column;
   gap: 8px;
+
+  max-width: 100%;
+  width: 500px;
 
   color: ${props => props.theme.colors.white};
   text-shadow: ${props => props.theme.shadows.textShadow};
@@ -35,7 +38,6 @@ export const FieldFormik = styled(Field)`
   padding-right: ${p => p.theme.space[4]}px;
 
   max-width: 100%;
-  //width: 320px;
 
   border: 0;
   outline: 0;
@@ -49,9 +51,9 @@ export const FieldFormik = styled(Field)`
 `;
 
 export const ErrorMessage = styled(FormikError)`
+  max-width: 500px;
   color: #9e0202;
   text-shadow: 0 0.5px 0.5px #fff;
-  max-width: 200px;
 `;
 
 export const StyledButton = styled.button`
@@ -66,7 +68,6 @@ export const StyledButton = styled.button`
   padding-right: ${p => p.theme.space[4]}px;
 
   max-width: 100%;
-  // width: 350px;
 
   border: ${p => p.theme.borders.none};
   outline: none;
